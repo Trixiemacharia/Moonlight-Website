@@ -10,7 +10,7 @@ class MenuCategory(models.Model):
         verbose_name_plural = 'Menu Categories'
 
         def __str__(self):
-            return self.name
+            return self.category
 
 class MenuItem(models.Model):
     name = models.CharField(max_length=100)
@@ -24,12 +24,17 @@ class MenuItem(models.Model):
         return f"{self.name} - Ksh {self.price}"
 
 class Reservation(models.Model):
-    STATUS_CHOICES:[('pending','Pending'),('confirmed','Confirmed'),('cancelled','Cancelled')]
+    STATUS_CHOICES = [
+        ('pending','Pending'),
+        ('confirmed','Confirmed'),
+        ('cancelled','Cancelled')
+        ]
+
     name = models.CharField(max_length=200)
     email = models.EmailField()
-    phone = models.IntegerField(max_length=20)
+    phone = models.CharField(max_length=20)
     date = models.DateField()
-    time = models.TimeField(blank=True)
+    time = models.TimeField(blank=True, null=True)
     guests = models.IntegerField()
     special_requests = models.TextField(blank=True)
     status = models.CharField(max_length=20,choices=STATUS_CHOICES, default='pending')
