@@ -83,7 +83,7 @@ export default function ReservationModal({ onClose }) {
             <div style={{ fontSize: '2.5rem', marginBottom: 12 }}>🎉</div>
             <h3 style={{ fontFamily: "'Playfair Display',serif", marginBottom: 8 }}>Reservation Confirmed!</h3>
             <p style={{ color: 'var(--warm-gray)', fontSize: '0.9rem', marginBottom: 24 }}>
-              We look forward to welcoming you to Moonlite Café. See you soon!
+              We look forward to welcoming you to Moonlight Café. See you soon!
             </p>
             <button onClick={onClose} style={{
               background: 'var(--terracotta)', color: 'white', border: 'none',

@@ -66,7 +66,7 @@ export default function Location({ info }) {
           <div style={{ fontSize: '3rem' }}>📍</div>
           <div style={{ fontWeight: 600, fontSize: '1rem' }}>Moonlight Café</div>
           <div style={{ fontSize: '0.85rem', color: 'var(--warm-gray)' }}>Banda St, Nairobi CBD</div>
-          <a href="https://maps.google.com/?q=Moonlite+Cafe+Banda+Street+Nairobi"
+          <a href="https://maps.google.com/?q=Moonlight+Cafe+Banda+Street+Nairobi"
             target="_blank" rel="noopener noreferrer"
             style={{
               marginTop: 12, padding: '10px 20px',

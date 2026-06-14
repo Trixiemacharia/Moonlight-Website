@@ -5,7 +5,7 @@ export default function Footer({ onReserve }) {
       padding: '48px 5% 32px', textAlign: 'center',
     }}>
       <div style={{ fontFamily: "'Playfair Display',serif", fontSize: '1.6rem', color: 'var(--cream)', marginBottom: 8 }}>
-        Moonlite Café
+        Moonlight Café
       </div>
       <div style={{ fontSize: '0.85rem', marginBottom: 24 }}>
         Where Every Bite Tells a Story · Banda St, Nairobi
@@ -40,7 +40,7 @@ export default function Footer({ onReserve }) {
 
       <hr style={{ border: 'none', borderTop: '1px solid rgba(250,246,239,0.1)', marginBottom: 24 }} />
       <div style={{ fontSize: '0.78rem', opacity: 0.4 }}>
-        © {new Date().getFullYear()} Moonlite Café · All rights reserved · Banda Street, Nairobi
+        © {new Date().getFullYear()} Moonlight Café · All rights reserved · Banda Street, Nairobi
       </div>
     </footer>
   )

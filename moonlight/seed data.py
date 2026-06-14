@@ -1,5 +1,5 @@
 import os, django
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'moonlite_backend.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'moonlight_backend.settings')
 django.setup()
 from restaurant.models import MenuCategory, MenuItem, Review
 Clear existing
@@ -32,7 +32,7 @@ cats = [
                     ]),
                     ("Drinks & Cocktails", 5, [
                         ("Passion Mojito", "Passion fruit, fresh mint, lime juice, soda water — refreshingly tropical", 550, True),
-                        ("Moonlite Infusion", "House signature blend of tropical fruits and herbs", 600, True),
+                        ("Moonlight Infusion", "House signature blend of tropical fruits and herbs", 600, True),
                         ("Coffee Latte", "Smooth espresso with velvety steamed milk", 350, False),
                         ("Milkshakes", "Thick creamy milkshakes — chocolate, vanilla, or strawberry", 450, True),
                         ("Fresh Juice", "Blended seasonal fruits, no added sugar", 350, False),

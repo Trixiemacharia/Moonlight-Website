@@ -12,7 +12,7 @@ import Footer            from './components/Footer'
 import { getRestaurantInfo, getMenuCategories, getReviews } from './api'
 
 const FALLBACK_INFO = {
-  name: 'Moonlite Café',
+  name: 'Moonlight Café',
   tagline: 'Where Every Bite Tells a Story',
   address: 'Banda St, Nairobi',
   phone: '0702 099927',

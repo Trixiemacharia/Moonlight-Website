@@ -21,7 +21,7 @@ const FALLBACK = [
   ]},
   { id: 5, name: 'Drinks & Cocktails', items: [
     { id: 11, name: 'Passion Mojito',        description: 'Passion fruit, fresh mint, lime juice, soda water',                price: '550.00',  is_popular: true  },
-    { id: 12, name: 'Moonlite Infusion',     description: 'House signature blend of tropical fruits and herbs',               price: '600.00',  is_popular: true  },
+    { id: 12, name: 'Moonlight Infusion',     description: 'House signature blend of tropical fruits and herbs',               price: '600.00',  is_popular: true  },
     { id: 13, name: 'Coffee Latte',          description: 'Smooth espresso with velvety steamed milk',                        price: '350.00',  is_popular: false },
     { id: 14, name: 'Milkshakes',            description: 'Thick creamy shakes — chocolate, vanilla, or strawberry',          price: '450.00',  is_popular: true  },
   ]},

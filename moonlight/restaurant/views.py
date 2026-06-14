@@ -42,7 +42,7 @@ class ReviewViewSet(viewsets.ReadOnlyModelViewSet):
 @api_view(['GET'])
 def restaurant_info(request):
     return Response({
-        'name': 'Moonlite Café',
+        'name': 'Moonlight Café',
         'tagline': 'Where Every Bite Tells a Story',
         'address': 'Banda St, Nairobi',
         'phone': '0702 099927',

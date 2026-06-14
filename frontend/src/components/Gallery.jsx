@@ -2,7 +2,7 @@ const photos = [
   { label: 'Grilled Chicken',   tag: 'Signature Dish', big: true  },
   { label: 'Mexican Pizza',      tag: 'Most Ordered',   big: false },
   { label: 'Salmon Atlantis',    tag: "Chef's Pick",    big: false },
-  { label: 'Moonlite Infusion',  tag: 'Cocktails',      big: false },
+  { label: 'Moonlight Infusion',  tag: 'Cocktails',      big: false },
   { label: 'Salmon Salad',       tag: 'Fresh Daily',    big: false },
 ]
 

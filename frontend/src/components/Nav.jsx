@@ -28,7 +28,7 @@ export default function Nav({ onReserve }) {
     }}>
       {/* Logo */}
       <div style={{ fontFamily: "'Playfair Display',serif", fontSize: '1.4rem', fontWeight: 700, color: 'var(--terracotta)' }}>
-        Moonlite<span style={{ color: 'var(--charcoal)' }}> Café</span>
+        Moonlight<span style={{ color: 'var(--charcoal)' }}> Café</span>
       </div>
 
       {/* Desktop links */}
