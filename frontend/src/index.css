@@ -1,0 +1,21 @@
+:root {
+  --terracotta:       #C8603A;
+  --terracotta-dark:  #A84B28;
+  --terracotta-light: #E8896A;
+  --cream:            #FAF6EF;
+  --cream-dark:       #F0E9DC;
+  --charcoal:         #2A2118;
+  --warm-gray:        #6B5F53;
+  --gold:             #D4A843;
+  --gold-light:       #F0C96A;
+  --white:            #FFFFFF;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+}
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
+a { text-decoration: none; }
