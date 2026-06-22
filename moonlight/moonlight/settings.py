@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG')
+DEBUG = config('DEBUG',default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'moonlight.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/ 'templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,17 +81,22 @@ WSGI_APPLICATION = 'moonlight.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': config('DATABASE_ENGINE'),
-        'NAME': config('DATABASE_NAME'),
-        'HOST': config('DATABASE_HOST', default=''),
-        'USER': config('DATABASE_USER', default=''),
-        'PORT': config('DATABASE_PORT', default=''),
-        'PASSWORD': config('DATABASE_PASSWORD', default=''),
+        'ENGINE':   'django.db.backends.mysql',
+        'NAME':     config('DB_NAME',     default='moonlite_db'),
+        'USER':     config('DB_USER',     default='moonlight_user'),
+        'PASSWORD': config('DB_PASSWORD', default='password'),
+        'HOST':     config('DB_HOST',     default='db'),
+        'PORT':     config('DB_PORT',     default='3306'),
+        'OPTIONS':  {'charset': 'utf8mb4'},
     }
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWED_ORIGINS = ["http://127.0.0.1:8000", "http://localhost:8000"]
+CORS_ALLOWED_ORIGINS = [
+    'http://127.0.0.1:3000',
+    'http://localhost:80',
+    'http://localhost',
+    ]
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES':['rest_framework.permissions.AllowAny'],
