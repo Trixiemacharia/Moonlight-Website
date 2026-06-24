@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 from decouple import config
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,18 +79,25 @@ WSGI_APPLICATION = 'moonlight.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+DATABASE_URL = config('DATABASE_URL', default=None)
 
-DATABASES = {
-    'default': {
-        'ENGINE':   'django.db.backends.mysql',
-        'NAME':     config('DB_NAME',     default='moonlite_db'),
-        'USER':     config('DB_USER',     default='moonlight_user'),
-        'PASSWORD': config('DB_PASSWORD', default='password'),
-        'HOST':     config('DB_HOST',     default='db'),
-        'PORT':     config('DB_PORT',     default='3306'),
-        'OPTIONS':  {'charset': 'utf8mb4'},
+if DATABASE_URL:
+    #Render PostgreSQL
+    DATABASES = {
+        'default'" dj_database_url.parse(DATABASE_URL)
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE':   'django.db.backends.mysql',
+            'NAME':     config('DB_NAME',     default='moonlite_db'),
+            'USER':     config('DB_USER',     default='moonlight_user'),
+            'PASSWORD': config('DB_PASSWORD', default='password'),
+            'HOST':     config('DB_HOST',     default='db'),
+            'PORT':     config('DB_PORT',     default='3306'),
+            'OPTIONS':  {'charset': 'utf8mb4'},
+        }
+    }
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
@@ -139,6 +147,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR/'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [BASE_DIR/'static']
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/'media'
